@@ -98,3 +98,36 @@ function bsearch(arr, target) {
 
 // console.log(bsearch([3, 4, 5], 3));
 // 3
+
+
+function mergesort(arr) {
+  if (arr.length === 1) {
+    return arr;
+  }
+
+  let mid = Math.floor(arr.length / 2);
+  let left = mergesort(arr.slice(0, mid));
+  let right = mergesort(arr.slice(mid, arr.length));
+
+  return merge(left, right);
+}
+
+function merge(left, right) {
+  let result = [];
+
+  while (left.length > 0 || right.length > 0) {
+    if (left[0] < right[0]){
+      result.push(left.shift());
+    } else if (left[0] === right[0]) {
+      result.push(left.shift());
+      result.push(right.shift());
+    } else {
+      result.push(right.shift());
+    }
+
+    result = result.concat(left).concat(right);
+    return result;
+  }
+
+}
+console.log(mergesort([2, 3, 1, 5, 4]));
