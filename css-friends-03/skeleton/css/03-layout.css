@@ -1,0 +1,27 @@
+/* PHASE 3: Layout */
+
+.header-logo{
+  position: relative;
+}
+
+.content{
+  min-height: 200px;
+  width: 46.7%;
+  background-color: grey;
+  position: absolute;
+  right: 510px;
+  border: 1px solid grey;
+}
+
+.content-sidebar{
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  float:left;
+  /*display: block;*/
+  background-color: blue;
+}
+
+.content-main{
+
+}
